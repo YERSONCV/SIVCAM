@@ -1,0 +1,17 @@
+<!DOCTYPE=html>
+<html>
+<head>
+    <title>
+        Videos
+    </title>
+</head>
+<body>
+ <h2>Videos resumidos por dia</h2>
+  {% for file in vids %}
+  <h3>{{file}}</h3>
+  <video width="640" height="480" controls>
+    <source src="{{ url_for('static', filename=file) }}" type="video/mp4">
+  </video>
+  {% endfor %}
+</body>
+</html>
